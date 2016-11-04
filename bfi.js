@@ -115,7 +115,7 @@ function reverse (n) {
     return s.join(numbers[n.toNumber()]);
 }
 
-inp.oninput = function () {
+run.onclick = function () {
     try {
         var val = inp.value;
         var parts = val.split(/[bxo]/);
