@@ -88,7 +88,7 @@ function reverse (n) {
         throw 'Error: not an integer';
     if (n.isZero())
         return '';
-    var s = n.gt(0) ? ['(', ')'] : ['(', ')([{}])'];
+    var s = n.gt(0) ? ['(', ')'] : ['([', '])'];
     if (n.lt(0))
         n = n.mul(-1);
     while (n.gte(N)) {
