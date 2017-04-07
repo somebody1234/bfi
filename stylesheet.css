@@ -1,0 +1,132 @@
+:root{
+    --second-color: #229022;
+    --main-color: #222222;
+}
+
+body {
+    background-color: var(--main-color);
+    color: var(--second-color);
+    font-family: "Arial", Times, sans-serif;
+    margin: 10;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.titlebox {
+    background-color: var(--main-color);
+    text-align: center;
+}
+
+#autorunbox {
+    display:inline-block;
+}
+
+.buttonpad {
+    display:inline-block;
+    padding: 8px 6px;
+}
+
+.checkboxpad {
+    display:inline-block;
+    padding:5px 8px;
+    width: 80px;
+    height: 20px;
+    text-align: center;
+}
+
+button {
+    background: var(--main-color);
+    border-radius: 5px;
+    border: 2px solid var(--second-color);
+    padding: 6px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    color: var(--second-color);
+    font-family: "Arial", Times, sans-serif;
+    outline: none;
+}
+
+code {
+    background-color: var(--main-color);
+}
+
+textarea {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom:none;
+    padding: 10;
+    width: 100%;
+    height: 100px;
+    color: var(--second-color);
+    background-color: #282828;
+    font-family: "Courier New";
+    font-size: 12px;
+    outline-color: var(--second-color);
+}
+
+.custom-checkbox {
+    display: none;
+}
+
+.custom-checkbox-label {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+.custom-checkbox + .custom-checkbox-label:before {
+    background: var(--main-color);
+    border-radius: 5px;
+    border: 2px solid var(--second-color);
+    content: "";
+    display: inline-block;
+    align: center;
+    width: 10px;
+    height: 10px;
+    padding: 2px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.custom-checkbox:checked + .custom-checkbox-label:after {
+    content: "";
+    padding: 2px;
+    position: absolute;
+    width: 1px;
+    height: 5px;
+    border: solid var(--second-color);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    top: 2px; left: 32px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 20%;
+  margin: 8px;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 90%;
+  height: 4px;
+  cursor: pointer;
+  background: var(--second-color);
+  border: none;
+}
+input[type=range]::-webkit-slider-thumb {
+  border: 2.5px solid var(--second-color);
+  height: 18px;
+  width: 15px;
+  border-radius: 5px;
+  background: var(--main-color);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+
+

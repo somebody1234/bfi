@@ -1,59 +1,60 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html style="height:100%">
 <head>
-    <title>Brain-flak integer metagolfer</title>
-    <meta encoding="utf-8">
-    <script src="bignumber.min.js"></script>
-    <style>
-    html, body {
-        height: 100%;
-    }
-
-    body {
-        margin: 0;
-        display: flex;
-        flex-flow: column nowrap;
-    }
-
-    textarea {
-        border-left: none;
-        border-right: none;
-        padding: 0;
-        width: 100%;
-    }
-
-    code {
-        background: #EEE;
-    }
-    </style>
+	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+	<title>Brain-flak integer metagolfer</title>
+	<meta encoding="utf-8">
+	<script src="bignumber.min.js"></script>
 </head>
 <body>
-    <span style="font-size:36px"><b>Brain-flak integer metagolfer</b></span>
-    <span>
-        Accepted input styles:
-        <code>{decimal}</code>
-        <code>{decimal}e{exponent}</code>
-        <code>{exponent}b{binary}</code>
-        <code>{exponent}o{octal}</code>
-        <code>{exponent}x{hex}</code>
-    </span>
-    <span>Multiple numbers can be separated by commas</span>
-    <span style="font-size:24px"><b>Input</b></span>
-    <textarea id="in" style="flex:1"></textarea>
-    <div><button id="run">Go!</button><input type="checkbox" id="autorun"> Autorun</div>
-    <br>
-    <div><span style="font-size:24px"><b>Output</b></span> <button id="copy">Copy</button></div>
-    <textarea id="out" style="flex:3" readonly="true"></textarea>
-    <span style="font-size:16px"><b>Highest value to cache</b></span>
-    <span><b>Warning:</b> Don't set this too high unless you know what you're doing - 100k cache may take up to 400MB RAM before GC (around 40MB after GC) so it it recommended to increase cache in increments of 100k at most</span>
-    <div style="display:flex">
-        <input id="slider" type="range" min="5000" max="2500000" value="5000" style="flex:1"></input>
-        <span id="value">5000</span>/2500000
-    </div>
-    <div>
-        <button id="test">Test optimality!</button>
-        <span id="test_result"></span>
-    </div>
-    <script src="bfi.js"></script>
+	<div class="titlebox">
+	<h1>Brain-flak Integer Metagolfer</h1>
+	</div>
+	<h2>Input</h2>
+	<span>
+		Accepted input styles:
+		<p>
+		<code>{decimal}</code>
+		<code>{decimal}e{exponent}</code>
+		<code>{exponent}b{binary}</code>
+		<code>{exponent}o{octal}</code>
+		<code>{exponent}x{hex}</code>
+		</p>
+	</span>
+	<span>Multiple numbers can be separated by commas
+	</span>
+	<div style="padding: 10px 0px;">
+	<textarea id="in" style="flex:1"></textarea>
+	</div>
+	<div id="inputcontrol">
+		<div class="buttonpad">
+			<button id="run">Go!</button>
+		</div>
+		<div class="checkboxpad">
+			<input class="custom-checkbox" type="checkbox" id="autorun">
+			<label for="autorun" class="custom-checkbox-label">Autorun</label>
+		</div>
+	</div>
+	<br>
+	<div>
+		<h2>Output</h2>
+		<textarea id="out" style="flex:3" readonly="true">
+		</textarea>
+		<div class="buttonpad">
+			<button id="copy">Copy</button></div>
+		</div>
+	<h3>Highest value to cache</h3>
+	<b>Warning:</b>
+	Don't set this too high unless you know what you're doing - 100k cache may take up to 400MB RAM before GC (around 40MB after GC) so it it recommended to increase cache in increments of 100k at most.</div>
+	<div style="display:flex">
+		
+		<input id="slider" type="range" min="5000" max="2500000" value="5000" style="flex:1"></input>
+		<span id="value">5000</span>/2500000</div>
+	<div class="buttonpad">
+		<button id="test">Test optimality!</button>
+		<span id="test_result"></span>
+	</div>
+	<script src="bfi.js"></script>
 </body>
+
 
